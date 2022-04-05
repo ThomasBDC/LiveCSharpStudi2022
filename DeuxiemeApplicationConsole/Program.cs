@@ -9,9 +9,10 @@ namespace Calculatrice
         {
             Console.WriteLine("Bienvenue dans ma calculatrice en C# :");
 
-            //TODO : Faire une calculatrice
-            while (true)
+            bool continueExecution;
+            do
             {
+                #region iterationDeCalcul
                 Console.WriteLine("Début du calcul !");
 
                 //Récupère le calcul auprès de l'utilisateur
@@ -44,20 +45,20 @@ namespace Calculatrice
                         case "-":
                             resultat = monPremierVraiChiffre - monDeuxiemeVraiChiffre;
                             break;
-                        case "*" :
-                        case "x" :
-                        case "X" :
+                        case "*":
+                        case "x":
+                        case "X":
                             resultat = monPremierVraiChiffre * monDeuxiemeVraiChiffre;
                             break;
-                        case "/": 
+                        case "/":
                             resultat = monPremierVraiChiffre / monDeuxiemeVraiChiffre;
                             break;
-                        default :
+                        default:
                             operateurOK = false;
                             break;
                     }
 
-                    if(operateurOK)
+                    if (operateurOK)
                     {
                         Console.WriteLine("Résultat : " + resultat);
                     }
@@ -70,9 +71,23 @@ namespace Calculatrice
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("le nombre n'est pas bon");  
+                    Console.WriteLine("le nombre n'est pas bon");
+                }
+                #endregion
+
+                //Savoir si l'utilisateur veut faire un autre calcul
+                Console.WriteLine("Voulez-vous faire un autre calcul (O/N)?");
+                string reponseContinueCalcul = Console.ReadLine();
+                if (reponseContinueCalcul == "N" || reponseContinueCalcul == "n")
+                {
+                    continueExecution = false;
+                }
+                else
+                {
+                    continueExecution = true;
                 }
             }
+            while (continueExecution);
         }
     }
 }
