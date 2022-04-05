@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PremiereApplicationConsole", "LiveCSharpStudi2022\PremiereApplicationConsole.csproj", "{92E5B5D1-B1C8-43A2-82F9-82463C4D6052}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaPremiereLibrairie", "MaPremiereLibrairie\MaPremiereLibrairie.csproj", "{6CB01F1A-C9EC-41F7-BE08-8981404BA739}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeuxiemeApplicationConsole", "DeuxiemeApplicationConsole\DeuxiemeApplicationConsole.csproj", "{1D3A79E9-2388-4C47-A474-FA4708F0AF78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculatrice", "DeuxiemeApplicationConsole\Calculatrice.csproj", "{1D3A79E9-2388-4C47-A474-FA4708F0AF78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{92E5B5D1-B1C8-43A2-82F9-82463C4D6052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{92E5B5D1-B1C8-43A2-82F9-82463C4D6052}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{92E5B5D1-B1C8-43A2-82F9-82463C4D6052}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{92E5B5D1-B1C8-43A2-82F9-82463C4D6052}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6CB01F1A-C9EC-41F7-BE08-8981404BA739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6CB01F1A-C9EC-41F7-BE08-8981404BA739}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CB01F1A-C9EC-41F7-BE08-8981404BA739}.Release|Any CPU.ActiveCfg = Release|Any CPU

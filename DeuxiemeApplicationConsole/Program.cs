@@ -1,7 +1,7 @@
 ﻿using System;
 using MaPremiereLibrairie;
 
-namespace DeuxiemeApplicationConsole
+namespace Calculatrice
 {
     internal class Program
     {
