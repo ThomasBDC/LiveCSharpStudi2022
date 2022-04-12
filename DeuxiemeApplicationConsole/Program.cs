@@ -14,17 +14,7 @@ namespace Calculatrice
             {
                 doCalculComplet();
 
-                //Savoir si l'utilisateur veut faire un autre calcul
-                Console.WriteLine("Voulez-vous faire un autre calcul (O/N)?");
-                string reponseContinueCalcul = Console.ReadLine();
-                if (reponseContinueCalcul == "N" || reponseContinueCalcul == "n")
-                {
-                    continueExecution = false;
-                }
-                else
-                {
-                    continueExecution = true;
-                }
+                continueExecution = AskYesNo("Voulez-vous faire un nouveau calcul ? (O/N)");
             }
             while (continueExecution);
         }
@@ -51,7 +41,9 @@ namespace Calculatrice
                 int monPremierVraiChiffre = Convert.ToInt32(premierChiffre);
                 int monDeuxiemeVraiChiffre = Convert.ToInt32(deuxiemeChiffre);
 
-                var resultat = Calcul(monPremierVraiChiffre, operation, monDeuxiemeVraiChiffre);
+                var resultat = Calcul(monPremierVraiChiffre, monDeuxiemeVraiChiffre, operation);
+
+                var resultatAddition = Calcul(monPremierVraiChiffre, monDeuxiemeVraiChiffre);
 
                 if (resultat != null)
                 {
@@ -73,12 +65,13 @@ namespace Calculatrice
         /// <summary>
         /// Retourne le résultat du calcul en fonction des nombres et de l'opérateur. Si l'opérateur n'est pas bon, retourne null
         /// Une divizion par 0 retourne l'exception ErrorDivideBy0
+        /// Si aucun operateur n'est donné, cela fera une addition
         /// </summary>
         /// <param name="nombre1">Premier nombre du calcul</param>
         /// <param name="operateur">Operateur de calcul (+,-,*,x,X,/)</param>
         /// <param name="nombre2">Deuxième nombre du calcul</param>
         /// <returns>Si opérateur ok -> résultat calcul sinon null</returns>
-        static double? Calcul(int nombre1, string operateur, int nombre2)
+        static double? Calcul(int nombre1, int nombre2, string operateur = "+")
         {
             double? resultat = 0;
             switch (operateur)
@@ -104,6 +97,30 @@ namespace Calculatrice
 
             return resultat;
             //Tout le code après le return n'est jamais exécuté
+        }
+
+        /// <summary>
+        /// Pose une question à l'utilisateur dans la console. 
+        /// </summary>
+        /// <param name="questionADemander">Question qui sera affichée dans la console</param>
+        /// <returns>Retourne un booléen en fonction de la réponse utilisateur</returns>
+        static bool AskYesNo(string questionADemander = "Voulez-vous continuer ?")
+        {
+            //Ecrire la question à l'utilisateur 
+            Console.WriteLine(questionADemander);
+            //Ecouter sa réponse
+            string reponse = Console.ReadLine();
+            //Vérifier si elle vaut N ou n
+            if(reponse == "N" || reponse == "n")
+            //Si oui retourner faux
+            {
+                return false;
+            }
+            //Sinon retouner vrai
+            else
+            {
+                return true;
+            }
         }
     }
 }
