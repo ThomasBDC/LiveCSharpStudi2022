@@ -12,14 +12,13 @@ namespace Calculatrice
             bool continueExecution;
             do
             {
-                doCalculComplet();
+                DoCalculComplet();
 
                 continueExecution = AskYesNo("Voulez-vous faire un nouveau calcul ? (O/N)");
             }
             while (continueExecution);
         }
-
-        static void doCalculComplet()
+        static void DoCalculComplet()
         {
             Console.WriteLine("Début du calcul !");
 
@@ -111,7 +110,7 @@ namespace Calculatrice
             //Ecouter sa réponse
             string reponse = Console.ReadLine();
             //Vérifier si elle vaut N ou n
-            if(reponse == "N" || reponse == "n")
+            if (reponse == "N" || reponse == "n")
             //Si oui retourner faux
             {
                 return false;
@@ -122,5 +121,7 @@ namespace Calculatrice
                 return true;
             }
         }
+
     }
+
 }
