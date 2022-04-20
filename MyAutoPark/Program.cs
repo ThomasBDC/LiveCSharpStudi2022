@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaPremiereLibrairie;
+using System;
 
 namespace MyAutoPark
 {
@@ -18,19 +19,28 @@ namespace MyAutoPark
             Console.WriteLine(toto);
             toto.Substring(1);
 
-                        
             //Créer notre objet en instanciant notre classe
-            Car PeugeotRczDeDominique = new Car("Gris", "Peugeot", "RCZ", 156) 
-            { 
+            Car PeugeotRczDeDominique = new Car("Gris", "Peugeot", "RCZ", 156)
+            {
                 TailleRoues = 17,
                 NbPortes = 3,
-                Carburant = " Gazoil",
                 Kilometrage = 150000
             };
-            
+
+            string monCarbu = CarburantsHelper.getCarburant(PeugeotRczDeDominique.Carburant);
+
             //On utilise notre objet
             PeugeotRczDeDominique.Rouler(15);
             Console.WriteLine(PeugeotRczDeDominique.Marque + " " + PeugeotRczDeDominique.Modele);
+
+
+            ClassDetest maClasse = new ClassDetest(12);
+
+            maClasse.MyPublicProperty = 5;
+
+
+            Class1.DisBonjour("LAurent");
+            
 
 
             Console.ReadLine();

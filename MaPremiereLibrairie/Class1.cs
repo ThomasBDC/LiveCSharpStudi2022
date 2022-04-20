@@ -8,5 +8,10 @@ namespace MaPremiereLibrairie
         {
             return "Bonjour " + prenom;
         }
+
+        internal static string DisAurevoir(string prenom)
+        {
+            return "Au revoir " + prenom;
+        }
     }
 }

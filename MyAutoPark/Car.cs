@@ -4,6 +4,10 @@ using System.Text;
 
 namespace MyAutoPark
 {
+    //public
+    //private
+    //internal
+    //protected -> on ne l'a pas expliqué
     public class Car
     {
         #region constructeur(s)
@@ -44,5 +48,26 @@ namespace MyAutoPark
             Kilometrage += nbKilometresInt;
         }
         #endregion
+    }
+
+
+    //Je crée une autre classe
+
+    //public class
+    //public static class -> Ne sera pas instancié pourra êter appelée depuis son nom
+    public static class CarburantsHelper
+    {
+        public static string getCarburant(string modele)
+        {
+            switch (modele)
+            {
+                case "308":
+                    return "Gazoil";
+                case "RCZ":
+                    return "Essence";
+                default:
+                    return "électrique";
+            }
+        }
     }
 }
