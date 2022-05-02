@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppTest", "AppTest\AppTest.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MethodeSurchargee", "MethodeSurchargee\MethodeSurchargee.csproj", "{14942669-5F5F-4727-A4D3-B8576649ED29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAutoPark", "MyAutoPark\MyAutoPark.csproj", "{E032FA0E-B9BF-410E-AAB3-B5AFB277CD61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAutoPark", "MyAutoPark\MyAutoPark.csproj", "{E032FA0E-B9BF-410E-AAB3-B5AFB277CD61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqExercice", "LinqExercice\LinqExercice.csproj", "{16D2C0E9-412F-4863-B804-E9D0CA5A800E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{E032FA0E-B9BF-410E-AAB3-B5AFB277CD61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E032FA0E-B9BF-410E-AAB3-B5AFB277CD61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E032FA0E-B9BF-410E-AAB3-B5AFB277CD61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16D2C0E9-412F-4863-B804-E9D0CA5A800E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16D2C0E9-412F-4863-B804-E9D0CA5A800E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16D2C0E9-412F-4863-B804-E9D0CA5A800E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16D2C0E9-412F-4863-B804-E9D0CA5A800E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

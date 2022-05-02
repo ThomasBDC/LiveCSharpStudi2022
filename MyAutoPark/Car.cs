@@ -10,6 +10,10 @@ namespace MyAutoPark
     //protected -> on ne l'a pas expliqué
     public class Car
     {
+
+        
+        
+
         #region constructeur(s)
         public Car(string couleur, string marque, string modele, int puissance)
         {
@@ -21,16 +25,26 @@ namespace MyAutoPark
         #endregion
 
         #region propriétés
-        public string Couleur;
-        public string Marque;
-        public string Modele;
-        public int Puissance;
-        public int TailleRoues;
-        public int NbPortes;
-        public string Carburant;
-        public int Kilometrage;
-        #endregion
 
+        //SET
+        //Couleur = "rouge"
+        //GET
+        //var maCouleur = Couleur;
+
+        public string Couleur { get; set; }
+        public string Marque { get; set; }  
+        public string Modele { get; set; }
+        public int Puissance { get; set; }
+        public int TailleRoues { get; set; }
+        public int NbPortes { get; set; }
+
+        
+
+        //Gazoil, Essence, Ethanol, Electrique, Hybrid, Gpl
+        //Doit avoir une valeur parmis un liste
+        public MesCarburants Carburant { get; set; } 
+        public int Kilometrage { get; set; }
+        #endregion
 
         #region méthodes
         /// <summary>
@@ -52,22 +66,35 @@ namespace MyAutoPark
 
 
     //Je crée une autre classe
-
     //public class
     //public static class -> Ne sera pas instancié pourra êter appelée depuis son nom
     public static class CarburantsHelper
     {
-        public static string getCarburant(string modele)
+        public static string[] MesCarburantsTab = new string[] { "Gazoil", "Essence", "Ethanol" };
+
+        public static MesCarburants getCarburant(string modele)
         {
             switch (modele)
             {
                 case "308":
-                    return "Gazoil";
+                    return MesCarburants.Gazoil;
                 case "RCZ":
-                    return "Essence";
+                    return MesCarburants.Sp98;
                 default:
-                    return "électrique";
+                    return MesCarburants.Electrique;
             }
         }
+    }
+
+
+    public enum MesCarburants
+    {
+        Gazoil = 0,
+        Sp95 = 1,
+        Sp98 = 2,
+        Ethanol = 3,
+        Electrique = 4,
+        Hybrid = 5,
+        Gpl = 6
     }
 }
