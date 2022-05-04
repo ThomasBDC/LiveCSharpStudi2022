@@ -7,6 +7,35 @@ namespace MyAutoPark
     {
         static void Main(string[] args)
         {
+            Car MaVoiture = new Car("Gris", "Peugeot", "RCZ", 156)
+            {
+                NbCeintureSecurite = 12
+            };
+
+
+            Console.WriteLine(MaVoiture);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             Livre monLivrePrefere = new Livre("Le petit prince")
             {
                 Auteur = "Antoine de St Exupéry",
@@ -68,6 +97,12 @@ namespace MyAutoPark
                 TailleRoues = 17,
                 NbPortes = 3,
                 Kilometrage = 150000
+            };
+
+            Moto maMoto = new Moto("Gris", "Derbi", "Senda", 15)
+            {
+                TailleRoues = 12,
+                Kilometrage = 5000
             };
 
             PeugeotRczDeDominique.Carburant = (MesCarburants)monCarburant;
